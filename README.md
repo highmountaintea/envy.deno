@@ -4,11 +4,11 @@
 
 ## Description
 
-Applications typically need to access configuration via environment variables.
-* During development, the application has to read the `.env` file to obtain those variables
-* In production, the application has to access shell environment variables via `Deno.env`
+Applications access environment variables differently based on situation:
+* During development, an application obtains environment variables via the `.env` file
+* In production, an application obtains shell environment variables via `Deno.env`
 
-Ideally, the application should be able to access environment variables the same way, regardless of whether it's supplied via the `.env` file or via shell.
+Ideally, the application code to access environment variables should be the same whether it is via `.env` file or via `Deno.env`.
 
 `envy` makes that possible.
 
